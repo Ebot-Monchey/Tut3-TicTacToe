@@ -2,7 +2,7 @@
 #define TICTACTOE_H
 	class TicTacToe {
 	private:
-		int board[3][3] = {};		// 0 represents empty, 1 represents player 1, and 2 represents player 2
+		int board[3][3];		// 0 represents empty, 1 represents player 1, and 2 represents player 2
 
 	public:
 		TicTacToe();
@@ -24,7 +24,7 @@
 		 * Returns 0 if the game is still in progress
 		 * Returns 1 if player 1 won the game
 		 * Returns 2 if player 2 won the game
-		 * Returns 3 if the game is still in progress
+		 * Returns 3 if the game is a draw
 		 */
 		int isWon();
 	};
