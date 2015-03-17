@@ -5,6 +5,9 @@ TicTacToe::TicTacToe() {
 	restart();
 }
 
+/*
+ * Resets the board.
+ */
 void TicTacToe::restart() {
 	for (int i = 0; i < 3; i++) {
 		for (int j = 0; j < 3; j++) {
@@ -13,6 +16,10 @@ void TicTacToe::restart() {
 	}
 }
 
+/*
+ * Sets the move on the board if it is valid.
+ * p - 1 represents player 1 and 2 player 2.
+ */
 bool TicTacToe::move(int p, int row, int col) {
 	if (board[row][col] != 0) {
 		return false;
@@ -23,6 +30,9 @@ bool TicTacToe::move(int p, int row, int col) {
 	}
 }
 
+/*
+ * Prints out the board as it currently is.
+ */
 void TicTacToe::print() {
 	using namespace std;
 	for (int i = 0; i < 7; i++) {
@@ -54,6 +64,13 @@ void TicTacToe::print() {
 	}
 }
 
+/*
+ * Determines whether the game has been won.
+ * Returns 0 if the game is still in progress
+ * Returns 1 if player 1 won the game
+ * Returns 2 if player 2 won the game
+ * Returns 3 if the game is a draw
+ */
 int TicTacToe::isWon() {
 	int p1, p2;			// Stores the number of times player 1 or 2 token appear in the row or column
 	p1 = p2 = 0;
